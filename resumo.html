@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Missão Gota d'Água 💧 — Resumo | Ciências 6º ano</title>
+<style>
+  :root{
+    --agua:#0288d1; --agua-esc:#01579b; --agua-clara:#4fc3f7; --agua-bg:#e1f5fe;
+    --verde:#2e9e5b; --verde-esc:#1b7a42;
+    --roxo:#7e57c2; --laranja:#fb8c00;
+    --amarelo:#fff3c4; --amarelo-bd:#f2c94c;
+    --texto:#0f2733; --cinza:#607d8b;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI',system-ui,sans-serif;background:linear-gradient(180deg,#e9f9ff,#c7ecfb 60%,#e9f9ff);color:var(--texto);font-size:19px;line-height:1.55;}
+  header.topo{background:linear-gradient(135deg,var(--agua-clara),var(--agua-esc));color:#fff;padding:26px 20px 30px;text-align:center;border-bottom:6px solid #ffffff55;}
+  header.topo .gota{font-size:52px;display:block;}
+  header.topo h1{margin:6px 0 4px;font-size:30px;}
+  header.topo p{margin:0;font-size:18px;opacity:.95;}
+  .faixa{max-width:920px;margin:0 auto;padding:18px;}
+  .intro{background:#fff;border:2px solid var(--agua);border-radius:16px;padding:16px 22px;margin:16px 0;box-shadow:0 4px 14px #0288d122;}
+  .intro b{color:var(--agua-esc);}
+  h2.sec{font-size:26px;color:var(--agua-esc);margin:28px 0 4px;display:flex;align-items:center;gap:10px;border-bottom:3px solid var(--agua-clara);padding-bottom:6px;}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin:14px 0;}
+  .card{background:#fff;border-radius:16px;padding:16px 18px;box-shadow:0 4px 12px #01579b18;border-top:6px solid var(--agua);}
+  .card.v{border-top-color:var(--verde);} .card.r{border-top-color:var(--roxo);} .card.l{border-top-color:var(--laranja);}
+  .card h4{margin:0 0 6px;font-size:20px;color:var(--agua-esc);}
+  .card.v h4{color:var(--verde-esc);} .card.r h4{color:#5e35b1;} .card.l h4{color:#e65100;}
+  .card p{margin:6px 0;font-size:17px;}
+  .card .big{font-size:22px;font-weight:800;color:var(--agua-esc);}
+  /* Flip cards */
+  .flipgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px;margin:14px 0;}
+  .flip{background:transparent;height:150px;perspective:1000px;cursor:pointer;}
+  .flip-in{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d;}
+  .flip.vira .flip-in{transform:rotateY(180deg);}
+  .flip-f,.flip-b{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px;text-align:center;box-shadow:0 4px 12px #01579b22;}
+  .flip-f{background:linear-gradient(135deg,var(--agua),var(--agua-esc));color:#fff;font-size:20px;font-weight:800;}
+  .flip-f .toque{font-size:13px;font-weight:500;opacity:.85;margin-top:8px;}
+  .flip-b{background:#fff;color:var(--texto);transform:rotateY(180deg);border:2px solid var(--agua);font-size:16px;}
+  .postit{background:var(--amarelo);border-left:6px solid var(--amarelo-bd);border-radius:10px;padding:12px 16px;margin:12px 0;font-size:17px;}
+  .postit b{color:#8a6d00;}
+  .peg{background:#fdecea;border-left:6px solid #e53935;border-radius:10px;padding:12px 16px;margin:12px 0;font-size:17px;}
+  .peg b{color:#c62828;}
+  .narr{background:#ede7f6;border-left:6px solid var(--roxo);border-radius:10px;padding:12px 16px;margin:12px 0;font-size:17px;font-style:italic;}
+  .narr b{color:#5e35b1;font-style:normal;}
+  table{width:100%;border-collapse:collapse;background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 4px 12px #01579b18;margin:14px 0;}
+  th,td{padding:11px 14px;text-align:left;border-bottom:1px solid #e0f2fb;font-size:17px;}
+  th{background:var(--agua);color:#fff;}
+  tr:last-child td{border-bottom:none;}
+  .glossario{background:#fff;border:2px solid var(--verde);border-radius:16px;padding:8px 6px;margin:14px 0;}
+  .glossario dt{font-weight:800;color:var(--verde-esc);font-size:19px;margin-top:10px;padding:0 14px;}
+  .glossario dd{margin:2px 0 8px;padding:0 14px;font-size:17px;}
+  .painel{position:fixed;bottom:14px;right:14px;z-index:50;background:#fff;border:2px solid var(--agua);border-radius:14px;padding:10px 12px;box-shadow:0 6px 20px #01579b44;font-size:13px;max-width:230px;}
+  .painel .data{color:var(--cinza);margin-bottom:6px;}
+  .painel button{font-size:12px;border:none;border-radius:8px;padding:6px 8px;margin:2px;cursor:pointer;color:#fff;font-weight:600;}
+  .b-exp{background:#0288d1;} .b-imp{background:#2e9e5b;} .b-zerar{background:#e53935;}
+  .painel .titp{font-weight:800;color:var(--agua-esc);margin-bottom:4px;}
+  @media(max-width:600px){body{font-size:18px;}.painel{left:10px;right:10px;max-width:none;bottom:8px;}}
+</style>
+</head>
+<body>
+<header class="topo">
+  <span class="gota">💧</span>
+  <h1>Missão Gota d'Água — Resumo</h1>
+  <p>Ciências • 6º ano • Capítulos 9 e 10 — Hidrosfera e Propriedades da Água</p>
+</header>
+
+<div class="faixa">
+  <div class="intro">
+    <p>Oi! Sou a <b>Pingo</b> 💧. Aqui está o resumão da nossa missão, cheio de cartõezinhos e dicas. Clique nos <b>cartões azuis que viram</b> (flip cards) para testar sua memória!</p>
+  </div>
+
+  <h2 class="sec">🌍 Parte 1 — A Hidrosfera</h2>
+  <div class="grid">
+    <div class="card"><h4>O que é hidrosfera?</h4><p>É <b>toda a água</b> do planeta (líquida e sólida): oceanos, rios, lagos, geleiras e água subterrânea.</p></div>
+    <div class="card"><h4>Quanto de água?</h4><p class="big">≈ 71%</p><p>da superfície da Terra é coberta por água.</p></div>
+    <div class="card v"><h4>Salgada x Doce</h4><p><b>≈ 97,5%</b> é salgada 🌊<br><b>≈ 2,5%</b> é doce (a maior parte <b>congelada</b> nos polos) 🧊</p></div>
+    <div class="card r"><h4>Do que é feita?</h4><p>Cada molécula = <b>H₂O</b><br>2 hidrogênio (H) + 1 oxigênio (O)</p></div>
+  </div>
+
+  <div class="postit"><b>📌 Dica de prova:</b> muita água no planeta, mas pouca água doce disponível — por isso precisamos economizar!</div>
+
+  <h2 class="sec">❄️💧☁️ Parte 2 — Os 3 estados da água</h2>
+  <div class="grid">
+    <div class="card"><h4>💠 Sólido</h4><p>Partículas organizadas e paradas.<br>Ex.: gelo, geleira, iceberg, granizo, neve.</p></div>
+    <div class="card"><h4>💧 Líquido</h4><p>Toma a forma do recipiente. O mais comum na natureza.<br>Ex.: rio, oceano, chuva.</p></div>
+    <div class="card"><h4>☁️ Gasoso</h4><p>Vapor de água — é <b>INVISÍVEL</b>!<br>Está espalhado pelo ar.</p></div>
+  </div>
+  <div class="peg"><b>⚠️ Pegadinha:</b> a "fumacinha" da panela e as nuvens NÃO são gás — são gotinhas de água <b>líquida</b>. Vapor de verdade é invisível!</div>
+
+  <h2 class="sec">🔄 Parte 3 — Mudanças de estado (clique para virar!)</h2>
+  <div class="flipgrid">
+    <div class="flip" onclick="vira(this,'f1')"><div class="flip-in"><div class="flip-f">Fusão<div class="toque">👆 toque</div></div><div class="flip-b">Sólido → Líquido<br>(o gelo <b>derrete</b>)</div></div></div>
+    <div class="flip" onclick="vira(this,'f2')"><div class="flip-in"><div class="flip-f">Solidificação<div class="toque">👆 toque</div></div><div class="flip-b">Líquido → Sólido<br>(a água <b>congela</b>)</div></div></div>
+    <div class="flip" onclick="vira(this,'f3')"><div class="flip-in"><div class="flip-f">Vaporização<div class="toque">👆 toque</div></div><div class="flip-b">Líquido → Gasoso<br>(a água <b>evapora/ferve</b>)</div></div></div>
+    <div class="flip" onclick="vira(this,'f4')"><div class="flip-in"><div class="flip-f">Condensação<div class="toque">👆 toque</div></div><div class="flip-b">Gasoso → Líquido<br>(o vapor vira <b>gotinha</b>)</div></div></div>
+    <div class="flip" onclick="vira(this,'f5')"><div class="flip-in"><div class="flip-f">Sublimação<div class="toque">👆 toque</div></div><div class="flip-b">Sólido → Gasoso<br>(direto, <b>sem virar líquido</b>)</div></div></div>
+  </div>
+  <div class="postit"><b>📌 Truque:</b> temperatura <b>aumenta</b> → sólido→líquido→gás. Temperatura <b>diminui</b> → gás→líquido→sólido.</div>
+
+  <h2 class="sec">🌦️ Parte 4 — Fenômenos da água</h2>
+  <table>
+    <tr><th>Fenômeno</th><th>O que é</th></tr>
+    <tr><td>Nuvem / Neblina</td><td>Gotinhas de água <b>líquida</b> no ar (neblina é nuvem baixinha)</td></tr>
+    <tr><td>Granizo</td><td>Pedaços de <b>gelo</b> (água sólida) que caem</td></tr>
+    <tr><td>Neve</td><td>Flocos de cristais de água <b>sólida</b></td></tr>
+    <tr><td>Orvalho</td><td>Vapor que <b>condensou</b> nas superfícies (água líquida)</td></tr>
+    <tr><td>Geada</td><td>Orvalho que <b>congelou</b> (ficou sólido)</td></tr>
+  </table>
+
+  <h2 class="sec">🔁 Parte 5 — O Ciclo da Água</h2>
+  <div class="narr"><b>🎬 A viagem da Pingo:</b> "Eu evaporo no rio com o calor do Sol, subo, esfrio e viro nuvem, o vento me leva, eu caio como chuva e entro no solo... e recomeço tudo de novo!"</div>
+  <div class="grid">
+    <div class="card l"><h4>1. Evaporação</h4><p>O <b>Sol</b> aquece a água, que evapora. As plantas também soltam vapor (evapotranspiração).</p></div>
+    <div class="card l"><h4>2. Condensação</h4><p>Lá no alto, o vapor esfria e vira gotinhas → <b>nuvens</b>.</p></div>
+    <div class="card l"><h4>3. Transporte</h4><p>O <b>vento</b> leva as nuvens de lugar.</p></div>
+    <div class="card l"><h4>4. Precipitação</h4><p>A água cai: <b>chuva</b>, neve ou granizo.</p></div>
+    <div class="card l"><h4>5. Infiltração/escoamento</h4><p>A água entra no solo (aquíferos) ou escorre para rios e mares.</p></div>
+  </div>
+  <div class="postit"><b>📌 Dica de ouro:</b> a energia do ciclo vem do <b>SOL</b>! ☀️</div>
+
+  <h2 class="sec">❤️ Parte 6 — Água e os seres vivos</h2>
+  <div class="grid">
+    <div class="card"><h4>Quanto de água?</h4><p class="big">≈ 65%</p><p>do corpo humano é água.</p></div>
+    <div class="card v"><h4>Funções no corpo</h4><p>💧 Dissolve<br>🚚 Transporta<br>🍽️ Ajuda na digestão<br>🚽 Elimina toxinas<br>🌡️ Controla a temperatura</p></div>
+  </div>
+
+  <h2 class="sec">✨ Parte 7 — Propriedades da Água (Cap. 10)</h2>
+  <div class="grid">
+    <div class="card"><h4>Impenetrabilidade</h4><p>Dois corpos não ocupam o mesmo lugar. Por isso a água <b>transborda</b> quando você põe uma pedra no copo cheio.</p></div>
+    <div class="card"><h4>Organolépticas</h4><p>Percebidas pelos sentidos. Água pura é:<br><b>insípida</b> (sem sabor), <b>inodora</b> (sem cheiro), <b>incolor</b> (sem cor).</p></div>
+    <div class="card v"><h4>Solubilidade</h4><p>A água é o <b>solvente universal</b> (dissolve muita coisa). Mas <b>NÃO dissolve</b>: areia, ferro, óleo, gordura e vidro.</p></div>
+    <div class="card r"><h4>Empuxo</h4><p>Força de <b>baixo para cima</b> que deixa os objetos "mais leves" na água. Descoberto por <b>Arquimedes</b>.</p></div>
+    <div class="card l"><h4>Dilatação anômala 🧊</h4><p>A água <b>aumenta de volume ao congelar</b> e fica menos densa → por isso o <b>gelo flutua</b>!</p></div>
+    <div class="card r"><h4>Tensão superficial</h4><p>A <b>coesão</b> (água atraindo água) cria uma "película" na superfície → insetos andam sobre a água e as gotas ficam redondas.</p></div>
+    <div class="card v"><h4>Capilaridade</h4><p><b>Coesão + adesão</b>: a água sobe por tubos finos, contra a gravidade. É assim que a água sobe nas <b>plantas</b>.</p></div>
+    <div class="card"><h4>Pressão</h4><p>Quanto <b>mais fundo</b>, <b>maior a pressão</b>. Por isso a barragem é mais larga embaixo.</p></div>
+    <div class="card l"><h4>Vasos comunicantes</h4><p>Recipientes ligados deixam a água no <b>mesmo nível</b>. Por isso a caixa-d'água no alto abastece a casa.</p></div>
+    <div class="card r"><h4>Retenção de calor</h4><p>A água guarda calor. Por isso o <b>deserto</b> (com pouca água) é quente de dia e frio de noite.</p></div>
+  </div>
+  <div class="peg"><b>⚠️ Não confunda:</b> <b>Coesão</b> = água + água (tensão superficial). <b>Adesão</b> = água + outra coisa. <b>Capilaridade</b> = coesão + adesão.</div>
+
+  <h2 class="sec">📖 Glossário da Pingo</h2>
+  <dl class="glossario">
+    <dt>Hidrosfera</dt><dd>Conjunto de toda a água do planeta.</dd>
+    <dt>Densidade</dt><dd>Quantidade de matéria num certo espaço. Menos denso que a água = flutua.</dd>
+    <dt>Solvente universal</dt><dd>Apelido da água por dissolver muitas substâncias.</dd>
+    <dt>Coesão</dt><dd>Atração das moléculas de água entre si.</dd>
+    <dt>Adesão</dt><dd>Atração da água por outras substâncias.</dd>
+    <dt>Empuxo</dt><dd>Força de baixo para cima que a água faz sobre um objeto mergulhado.</dd>
+    <dt>Aquífero</dt><dd>Reservatório de água doce debaixo do solo.</dd>
+    <dt>Amplitude térmica</dt><dd>Diferença entre a temperatura mais alta e a mais baixa de um lugar.</dd>
+  </dl>
+</div>
+
+<div class="painel">
+  <div class="titp">💧 Meu resumo</div>
+  <div class="data" id="pdata">Ainda não salvo</div>
+  <button class="b-exp" onclick="exportar()">📥 Exportar</button>
+  <button class="b-imp" onclick="document.getElementById('imp').click()">📤 Importar</button>
+  <button class="b-zerar" onclick="zerar()">🗑️ Zerar</button>
+  <input type="file" id="imp" accept=".json" style="display:none" onchange="importar(event)">
+</div>
+
+<script>
+const CHAVE="gota_resumo_cap9_10_v1";
+let estado={};
+function carregar(){try{estado=JSON.parse(localStorage.getItem(CHAVE))||{};}catch(e){estado={};}}
+function salvar(){estado._data=new Date().toLocaleString('pt-BR');localStorage.setItem(CHAVE,JSON.stringify(estado));document.getElementById('pdata').textContent="Salvo: "+estado._data;}
+carregar();
+if(estado._data) document.getElementById('pdata').textContent="Salvo: "+estado._data;
+
+function vira(el,id){ el.classList.toggle('vira'); estado[id]=el.classList.contains('vira'); salvar(); }
+// restaurar flips
+window.addEventListener('load',()=>{
+  document.querySelectorAll('.flip').forEach((el,i)=>{
+    const onclick=el.getAttribute('onclick'); const m=onclick.match(/'(f\d)'/);
+    if(m && estado[m[1]]) el.classList.add('vira');
+  });
+});
+function exportar(){const blob=new Blob([JSON.stringify(estado,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='meu-resumo-gota-dagua.json';a.click();}
+function importar(ev){const f=ev.target.files[0];if(!f)return;const r=new FileReader();r.onload=e=>{try{estado=JSON.parse(e.target.result);localStorage.setItem(CHAVE,JSON.stringify(estado));location.reload();}catch(x){alert('Arquivo inválido.');}};r.readAsText(f);}
+function zerar(){if(confirm('Zerar as marcações deste resumo?')){localStorage.removeItem(CHAVE);location.reload();}}
+</script>
+</body>
+</html>
